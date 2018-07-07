@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form class="" action="index.html" method="post">
+    <button id="heads" type="button" name="button">Heads</button>
+    <button id="tails"type="button" name="button">Tails</button>
+    <h1></h1>
+  </form>
+
+  <script type="text/javascript">
+  // Coin flip game
+  //user cliks heads or tails
+  // compurter determins flip
+  // show the user if they won or lost in the document
+
+  //event lister for heads
+  document.getElementById("heads").onclick = flipHeads
+
+  //event lister for tails
+  document.getElementById("tails").onclick = flipTails
+
+  //function if user chose heads
+  function flipHeads() {
+    //genorate flip
+    var flip = genRand()
+    //determine if user won
+    if( flip < .5){
+      document.getElementsByTagName('h1')[0].innerHTML = "You WIN"
+    }else{
+      //place result of dom
+      document.getElementsByTagName('h1') [0].innerHTML = " You Lose"
+    }
+  }
+
+  //function if user chose tails
+  function flipTails() {
+    //genorate flip
+    var flip = genRand()
+    //determine if user won
+    if( flip < .5){
+      document.getElementsByTagName('h1')[0].innerHTML = "You WIN"
+    }else{
+      //place result of dom
+      document.getElementsByTagName('h1') [0].innerHTML = " You Lose"
+    }
+  }
+
+  function genRand() {
+    return Math.random()
+  }
+  </script>
+</body>
+</html>
